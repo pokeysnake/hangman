@@ -1,4 +1,4 @@
-package com.mycompany.swingprojectv1point1;
+package lasagna.hangman.start;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -13,7 +13,6 @@ import java.util.logging.Logger;
  * @author tater
  */
 public class highscoresScreen extends javax.swing.JFrame {
-
 
     /**
      * Creates new form highscoresScreen
@@ -31,26 +30,17 @@ public class highscoresScreen extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
         hs1 = new javax.swing.JLabel();
         hs2 = new javax.swing.JLabel();
         hs3 = new javax.swing.JLabel();
         hs4 = new javax.swing.JLabel();
         hs5 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("high scores ");
-
-        jButton1.setText("to game");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
-        hs1.setText("HighScore one");
+        hs1.setText("jLabel1");
         hs1.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
                 hs1AncestorAdded(evt);
@@ -61,7 +51,7 @@ public class highscoresScreen extends javax.swing.JFrame {
             }
         });
 
-        hs2.setText("HighScore two");
+        hs2.setText("jLabel2");
         hs2.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
                 hs2AncestorAdded(evt);
@@ -72,7 +62,7 @@ public class highscoresScreen extends javax.swing.JFrame {
             }
         });
 
-        hs3.setText("HighScore 3");
+        hs3.setText("jLabel3");
         hs3.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
                 hs3AncestorAdded(evt);
@@ -83,7 +73,7 @@ public class highscoresScreen extends javax.swing.JFrame {
             }
         });
 
-        hs4.setText("HighScore 4");
+        hs4.setText("jLabel4");
         hs4.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
                 hs4AncestorAdded(evt);
@@ -94,7 +84,7 @@ public class highscoresScreen extends javax.swing.JFrame {
             }
         });
 
-        hs5.setText("HighScore 5");
+        hs5.setText("jLabel5");
         hs5.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
                 hs5AncestorAdded(evt);
@@ -105,93 +95,89 @@ public class highscoresScreen extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setText("back to menu");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jLabel6.setText("Current HighScores:");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(96, 96, 96)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(141, 141, 141)
+                        .addComponent(jButton1))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(107, 231, Short.MAX_VALUE)
-                        .addComponent(jButton1)
-                        .addGap(45, 45, 45))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(hs5, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(hs4, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(hs3, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(hs2, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addContainerGap())
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addComponent(hs1, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(289, 289, 289)))))
+                        .addGap(170, 170, 170)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(hs1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(hs5, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(hs4, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(hs2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(hs3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(0, 157, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(jLabel1)
-                .addGap(2, 2, 2)
-                .addComponent(jButton1)
-                .addGap(21, 21, 21)
-                .addComponent(hs1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addContainerGap()
+                .addComponent(jLabel6)
+                .addGap(32, 32, 32)
+                .addComponent(hs1)
+                .addGap(18, 18, 18)
                 .addComponent(hs2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(hs3)
                 .addGap(18, 18, 18)
                 .addComponent(hs4)
                 .addGap(18, 18, 18)
                 .addComponent(hs5)
-                .addContainerGap(79, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(28, 28, 28))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
-        GameScreen x = new GameScreen();
-        x.setVisible(true);
-// TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void hs1AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_hs1AncestorAdded
-        try {
-            hs1.setText(SwingProjectv1point1.fileMethod(1));        // TODO add your handling code here:
+try {
+            hs1.setText(Hangman.fileMethod(1));        // TODO add your handling code here:
         } catch (Exception ex) {
             Logger.getLogger(highscoresScreen.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        }        // TODO add your handling code here:
     }//GEN-LAST:event_hs1AncestorAdded
 
     private void hs2AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_hs2AncestorAdded
-        try {
-            hs2.setText(SwingProjectv1point1.fileMethod(2));        // TODO add your handling code here:
+try {
+            hs2.setText(Hangman.fileMethod(2));        // TODO add your handling code here:
         } catch (Exception ex) {
             Logger.getLogger(highscoresScreen.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        }        // TODO add your handling code here:
     }//GEN-LAST:event_hs2AncestorAdded
 
     private void hs3AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_hs3AncestorAdded
 try {
-            hs3.setText(SwingProjectv1point1.fileMethod(3));        // TODO add your handling code here:
+            hs3.setText(Hangman.fileMethod(3));        // TODO add your handling code here:
         } catch (Exception ex) {
             Logger.getLogger(highscoresScreen.class.getName()).log(Level.SEVERE, null, ex);
-        }        
-
-// TODO add your handling code here:
+        }        // TODO add your handling code here:
     }//GEN-LAST:event_hs3AncestorAdded
 
     private void hs4AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_hs4AncestorAdded
 try {
-            hs4.setText(SwingProjectv1point1.fileMethod(4));        // TODO add your handling code here:
+            hs4.setText(Hangman.fileMethod(4));        // TODO add your handling code here:
         } catch (Exception ex) {
             Logger.getLogger(highscoresScreen.class.getName()).log(Level.SEVERE, null, ex);
         }        // TODO add your handling code here:
@@ -199,11 +185,17 @@ try {
 
     private void hs5AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_hs5AncestorAdded
 try {
-            hs5.setText(SwingProjectv1point1.fileMethod(5));        // TODO add your handling code here:
+            hs5.setText(Hangman.fileMethod(5));        // TODO add your handling code here:
         } catch (Exception ex) {
             Logger.getLogger(highscoresScreen.class.getName()).log(Level.SEVERE, null, ex);
         }        // TODO add your handling code here:
     }//GEN-LAST:event_hs5AncestorAdded
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+dispose();
+        start x = new start();
+x.setVisible(true);// TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -247,6 +239,6 @@ try {
     private javax.swing.JLabel hs4;
     private javax.swing.JLabel hs5;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel6;
     // End of variables declaration//GEN-END:variables
 }

@@ -685,9 +685,6 @@
           <SubComponents>
             <Component class="javax.swing.JLabel" name="one">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\nic\Documents\NetBeansProjects\hangman\face1.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="jLabel1"/>
               </Properties>
               <Events>
@@ -700,11 +697,6 @@
               </Constraints>
             </Component>
             <Component class="javax.swing.JLabel" name="two">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\nic\Documents\NetBeansProjects\hangman\body1.png"/>
-                </Property>
-              </Properties>
               <Events>
                 <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="twoPropertyChange"/>
               </Events>
@@ -715,11 +707,6 @@
               </Constraints>
             </Component>
             <Component class="javax.swing.JLabel" name="four">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\nic\Documents\NetBeansProjects\hangman\rightarm1.png"/>
-                </Property>
-              </Properties>
               <Events>
                 <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="fourPropertyChange"/>
               </Events>
@@ -730,11 +717,6 @@
               </Constraints>
             </Component>
             <Component class="javax.swing.JLabel" name="three">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\nic\Documents\NetBeansProjects\hangman\leftarm1.png"/>
-                </Property>
-              </Properties>
               <Events>
                 <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="threePropertyChange"/>
               </Events>
@@ -745,11 +727,6 @@
               </Constraints>
             </Component>
             <Component class="javax.swing.JLabel" name="five">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\nic\Documents\NetBeansProjects\hangman\leftleg1.png"/>
-                </Property>
-              </Properties>
               <Events>
                 <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="fivePropertyChange"/>
               </Events>
@@ -760,11 +737,6 @@
               </Constraints>
             </Component>
             <Component class="javax.swing.JLabel" name="six">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\nic\Documents\NetBeansProjects\hangman\rightleg1.png"/>
-                </Property>
-              </Properties>
               <Events>
                 <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="sixPropertyChange"/>
               </Events>

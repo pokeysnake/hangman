@@ -1,19 +1,16 @@
+package lasagna.hangman.start;
+
+import java.awt.Color;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.mycompany.swingprojectv1point1;
-
-import java.awt.Color;
-import static java.awt.Color.red;
-import static javax.print.attribute.standard.Chromaticity.COLOR;
 
 /**
  *
  * @author tater
  */
-
-//ddfdfdf
 public class GameScreen extends javax.swing.JFrame {
 public static int currentLowestScore;
 public static int numberOfScores;
@@ -45,11 +42,11 @@ public static int finalScore;
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        redButton = new javax.swing.JButton();
-        greenButton = new javax.swing.JButton();
-        blueButton = new javax.swing.JButton();
-        yellowButton = new javax.swing.JButton();
         purpleButton = new javax.swing.JButton();
+        redButton = new javax.swing.JButton();
+        blueButton = new javax.swing.JButton();
+        greenButton = new javax.swing.JButton();
+        yellowButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -63,102 +60,8 @@ public static int finalScore;
             public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
             }
         });
-        jLabel1.addComponentListener(new java.awt.event.ComponentAdapter() {
-            public void componentShown(java.awt.event.ComponentEvent evt) {
-                jLabel1ComponentShown(evt);
-            }
-        });
-        jLabel1.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                jLabel1PropertyChange(evt);
-            }
-        });
 
-        redButton.setText("redButton");
-        redButton.addAncestorListener(new javax.swing.event.AncestorListener() {
-            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
-                redButtonAncestorAdded(evt);
-            }
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
-            }
-            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
-            }
-        });
-        redButton.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                redButtonMouseMoved(evt);
-            }
-        });
-        redButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                redButtonActionPerformed(evt);
-            }
-        });
-
-        greenButton.setText("greenButton");
-        greenButton.addAncestorListener(new javax.swing.event.AncestorListener() {
-            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
-                greenButtonAncestorAdded(evt);
-            }
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
-            }
-            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
-            }
-        });
-        greenButton.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                greenButtonMouseMoved(evt);
-            }
-        });
-        greenButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                greenButtonActionPerformed(evt);
-            }
-        });
-
-        blueButton.setText("blueButton");
-        blueButton.addAncestorListener(new javax.swing.event.AncestorListener() {
-            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
-                blueButtonAncestorAdded(evt);
-            }
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
-            }
-            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
-            }
-        });
-        blueButton.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                blueButtonMouseMoved(evt);
-            }
-        });
-        blueButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                blueButtonActionPerformed(evt);
-            }
-        });
-
-        yellowButton.setText("yellowButton");
-        yellowButton.addAncestorListener(new javax.swing.event.AncestorListener() {
-            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
-                yellowButtonAncestorAdded(evt);
-            }
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
-            }
-            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
-            }
-        });
-        yellowButton.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                yellowButtonMouseMoved(evt);
-            }
-        });
-        yellowButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                yellowButtonActionPerformed(evt);
-            }
-        });
-
-        purpleButton.setText("purpleButton");
+        purpleButton.setText("newpurp");
         purpleButton.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
                 purpleButtonAncestorAdded(evt);
@@ -179,261 +82,136 @@ public static int finalScore;
             }
         });
 
+        redButton.setText("newred");
+        redButton.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                redButtonAncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        redButton.addMouseWheelListener(new java.awt.event.MouseWheelListener() {
+            public void mouseWheelMoved(java.awt.event.MouseWheelEvent evt) {
+                redButtonMouseWheelMoved(evt);
+            }
+        });
+        redButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                redButtonActionPerformed(evt);
+            }
+        });
+
+        blueButton.setText("newblue");
+        blueButton.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                blueButtonAncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        blueButton.addMouseWheelListener(new java.awt.event.MouseWheelListener() {
+            public void mouseWheelMoved(java.awt.event.MouseWheelEvent evt) {
+                blueButtonMouseWheelMoved(evt);
+            }
+        });
+        blueButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                blueButtonActionPerformed(evt);
+            }
+        });
+
+        greenButton.setText("newgreen");
+        greenButton.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                greenButtonAncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        greenButton.addMouseWheelListener(new java.awt.event.MouseWheelListener() {
+            public void mouseWheelMoved(java.awt.event.MouseWheelEvent evt) {
+                greenButtonMouseWheelMoved(evt);
+            }
+        });
+        greenButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                greenButtonActionPerformed(evt);
+            }
+        });
+
+        yellowButton.setText("newyellow");
+        yellowButton.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                yellowButtonAncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        yellowButton.addMouseWheelListener(new java.awt.event.MouseWheelListener() {
+            public void mouseWheelMoved(java.awt.event.MouseWheelEvent evt) {
+                yellowButtonMouseWheelMoved(evt);
+            }
+        });
+        yellowButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                yellowButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(84, 84, 84)
-                .addComponent(jLabel1)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(14, 14, 14)
+                .addComponent(purpleButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(redButton)
+                .addGap(58, 58, 58))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(yellowButton)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(purpleButton)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 146, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(greenButton, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(redButton, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(258, 258, 258))
+                .addGap(35, 35, 35)
+                .addComponent(yellowButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 114, Short.MAX_VALUE)
+                .addComponent(greenButton)
+                .addGap(83, 83, 83))
             .addGroup(layout.createSequentialGroup()
-                .addGap(150, 150, 150)
-                .addComponent(blueButton)
+                .addGap(158, 158, 158)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(blueButton)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(32, 32, 32)
+                .addGap(36, 36, 36)
                 .addComponent(jLabel1)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(73, 73, 73)
-                        .addComponent(redButton))
+                        .addGap(43, 43, 43)
+                        .addComponent(purpleButton))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(82, 82, 82)
-                        .addComponent(purpleButton)))
-                .addGap(58, 58, 58)
+                        .addGap(51, 51, 51)
+                        .addComponent(redButton)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
                 .addComponent(blueButton)
-                .addGap(64, 64, 64)
+                .addGap(63, 63, 63)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(greenButton)
                     .addComponent(yellowButton))
-                .addContainerGap(266, Short.MAX_VALUE))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jLabel1ComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jLabel1ComponentShown
-
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel1ComponentShown
-
-    private void jLabel1PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jLabel1PropertyChange
-        
-   // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel1PropertyChange
-
-    private void redButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_redButtonActionPerformed
-if(tcolor.equals("red")){
-            currentScore+=100;   
-        }
-        round++;
-        if(round==5){
-            //the correct final score for nick 
-            //finalScore = currentScore + GameScreen2.userScore
-            finalScore=currentScore;
-            System.out.println("Final Score = " +finalScore);
-            currentScore=0;
-            round=0;
-            dispose();
-            //tell nick to change his end screen to GameScreen game = New GameScreen();
-            //game.setVisible(true);
-            BubbleGameEndScreen x = new BubbleGameEndScreen();
-            x.setVisible(true);
-        }
-        System.out.println("current score = "+currentScore);
-        System.out.println("round " + round );
-        x = Math.random()*5+1;
-        System.out.println(x);
-        c= Math.random()*5+1;
- System.out.println(c);
- if((int)c==1){
-     jLabel1.setForeground(Color.RED);
-       tcolor="red";
- } else if((int)c==2){
-     jLabel1.setForeground(Color.GREEN);
-    tcolor="green";
- } else if((int)c==3){
-      jLabel1.setForeground(Color.BLUE);
-     tcolor="blue";
- } else if((int)c==4){
-      jLabel1.setForeground(Color.YELLOW);
-    tcolor="yellow";
- } else if((int)c==5){
-     jLabel1.setForeground(Color.MAGENTA);
-     tcolor="purple";
- }
-        if((int)x==1){
-            jLabel1.setText("red");
-       
-        } else if ((int)x==2){
-            jLabel1.setText("green");
-       
-        } else if ((int)x==3){
-            jLabel1.setText("blue");
-       
-        } else if ((int)x==4){
-            jLabel1.setText("yellow");
-       
-        } else if ((int)x==5){
-            jLabel1.setText("purple");
-       
-        }
-// TODO add your handling code here:
-    }//GEN-LAST:event_redButtonActionPerformed
-
-    private void redButtonAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_redButtonAncestorAdded
-        redButton.setBackground(Color.RED);// TODO add your handling code here:
-    }//GEN-LAST:event_redButtonAncestorAdded
-
-    private void greenButtonAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_greenButtonAncestorAdded
-    greenButton.setBackground(Color.GREEN);        // TODO add your handling code here:
-    }//GEN-LAST:event_greenButtonAncestorAdded
-
-    private void blueButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blueButtonActionPerformed
-if(tcolor.equals("blue")){
-            currentScore+=100;   
-        }
-        round++;
-        if(round==5){
-            //the correct final score for nick 
-            //finalScore = currentScore + GameScreen2.userScore
-            finalScore=currentScore;
-            System.out.println("Final Score = " +finalScore);
-            currentScore=0;
-            round=0;
-            dispose();
-            //tell nick to change his end screen to GameScreen game = New GameScreen();
-            //game.setVisible(true);
-            BubbleGameEndScreen x = new BubbleGameEndScreen();
-            x.setVisible(true);
-        }
-        System.out.println("current score = "+currentScore);
-        System.out.println("round " + round );
-        x = Math.random()*5+1;
-        System.out.println(x);
-        c= Math.random()*5+1;
- System.out.println(c);
- if((int)c==1){
-     jLabel1.setForeground(Color.RED);
-       tcolor="red";
- } else if((int)c==2){
-     jLabel1.setForeground(Color.GREEN);
-    tcolor="green";
- } else if((int)c==3){
-      jLabel1.setForeground(Color.BLUE);
-     tcolor="blue";
- } else if((int)c==4){
-      jLabel1.setForeground(Color.YELLOW);
-    tcolor="yellow";
- } else if((int)c==5){
-     jLabel1.setForeground(Color.MAGENTA);
-     tcolor="purple";
- }
-        if((int)x==1){
-            jLabel1.setText("red");
-       
-        } else if ((int)x==2){
-            jLabel1.setText("green");
-       
-        } else if ((int)x==3){
-            jLabel1.setText("blue");
-       
-        } else if ((int)x==4){
-            jLabel1.setText("yellow");
-       
-        } else if ((int)x==5){
-            jLabel1.setText("purple");
-       
-        }        // TODO add your handling code here:
-    }//GEN-LAST:event_blueButtonActionPerformed
-
-    private void blueButtonAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_blueButtonAncestorAdded
-    blueButton.setBackground(Color.BLUE);        // TODO add your handling code here:
-    }//GEN-LAST:event_blueButtonAncestorAdded
-
-    private void yellowButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yellowButtonActionPerformed
-        if(tcolor.equals("yellow")){
-            currentScore+=100;   
-        }
-        round++;
-        if(round==5){
-            //the correct final score for nick 
-            //finalScore = currentScore + GameScreen2.userScore
-            finalScore=currentScore;
-            System.out.println("Final Score = " +finalScore);
-            currentScore=0;
-            round=0;
-            dispose();
-            //tell nick to change his end screen to GameScreen game = New GameScreen();
-            //game.setVisible(true);
-            BubbleGameEndScreen x = new BubbleGameEndScreen();
-            x.setVisible(true);
-        }
-        System.out.println("current score = "+currentScore);
-        System.out.println("round " + round );
-        x = Math.random()*5+1;
-        System.out.println(x);
-        c= Math.random()*5+1;
- System.out.println(c);
- if((int)c==1){
-     jLabel1.setForeground(Color.RED);
-       tcolor="red";
- } else if((int)c==2){
-     jLabel1.setForeground(Color.GREEN);
-    tcolor="green";
- } else if((int)c==3){
-      jLabel1.setForeground(Color.BLUE);
-     tcolor="blue";
- } else if((int)c==4){
-      jLabel1.setForeground(Color.YELLOW);
-    tcolor="yellow";
- } else if((int)c==5){
-     jLabel1.setForeground(Color.MAGENTA);
-     tcolor="purple";
- }
-        if((int)x==1){
-            jLabel1.setText("red");
-       
-        } else if ((int)x==2){
-            jLabel1.setText("green");
-       
-        } else if ((int)x==3){
-            jLabel1.setText("blue");
-       
-        } else if ((int)x==4){
-            jLabel1.setText("yellow");
-       
-        } else if ((int)x==5){
-            jLabel1.setText("purple");
-       
-        } 
-        //need to finsih coding pink
-// TODO add your handling code here:
-    }//GEN-LAST:event_yellowButtonActionPerformed
-
-    private void yellowButtonAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_yellowButtonAncestorAdded
-    yellowButton.setBackground(Color.YELLOW);        // TODO add your handling code here:
-    }//GEN-LAST:event_yellowButtonAncestorAdded
-
-    private void purpleButtonAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_purpleButtonAncestorAdded
-    purpleButton.setBackground(Color.MAGENTA);        // TODO add your handling code here:
-    }//GEN-LAST:event_purpleButtonAncestorAdded
 
     private void jLabel1AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jLabel1AncestorAdded
  x = Math.random()*5+1;
@@ -475,35 +253,73 @@ if((int)x==1){
 }        // TODO add your handling code here:
     }//GEN-LAST:event_jLabel1AncestorAdded
 
-    private void yellowButtonMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_yellowButtonMouseMoved
-    getRootPane().setDefaultButton(yellowButton);        // TODO add your handling code here:
-    }//GEN-LAST:event_yellowButtonMouseMoved
-
-    private void blueButtonMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_blueButtonMouseMoved
-   getRootPane().setDefaultButton(blueButton);      // TODO add your handling code here:
-    }//GEN-LAST:event_blueButtonMouseMoved
-
-    private void redButtonMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_redButtonMouseMoved
-    getRootPane().setDefaultButton(redButton);         // TODO add your handling code here:
-    }//GEN-LAST:event_redButtonMouseMoved
-
-    private void purpleButtonMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_purpleButtonMouseMoved
-    getRootPane().setDefaultButton(purpleButton);         // TODO add your handling code here:
-    }//GEN-LAST:event_purpleButtonMouseMoved
-
-    private void greenButtonMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_greenButtonMouseMoved
-    getRootPane().setDefaultButton(greenButton);         // TODO add your handling code here:
-    }//GEN-LAST:event_greenButtonMouseMoved
-
     private void purpleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_purpleButtonActionPerformed
-if(tcolor.equals("purple")){
+    if(tcolor.equals("purple")){
             currentScore+=100;   
         }
         round++;
         if(round==5){
             //the correct final score for nick 
-            //finalScore = currentScore + GameScreen2.userScore
-            finalScore=currentScore;
+            finalScore = currentScore + game1.userScore;
+            
+            System.out.println("Final Score = " +finalScore);
+            currentScore=0;
+            round=0;
+            dispose();
+            //tell nick to change his end screen to GameScreen game = New GameScreen();
+            //game.setVisible(true);
+            BubbleGameEndScreen x = new BubbleGameEndScreen();
+            x.setVisible(true);
+        }
+        System.out.println("current score = "+currentScore);
+        System.out.println("round " + round );
+        x = Math.random()*5+1;
+        System.out.println(x);
+        c= Math.random()*5+1;
+ System.out.println(c);
+ if((int)c==1){
+     jLabel1.setForeground(Color.RED);
+       tcolor="red";
+ } else if((int)c==2){
+     jLabel1.setForeground(Color.GREEN);
+    tcolor="green";
+ } else if((int)c==3){
+      jLabel1.setForeground(Color.BLUE);
+     tcolor="blue";
+ } else if((int)c==4){
+      jLabel1.setForeground(Color.YELLOW);
+    tcolor="yellow";
+ } else if((int)c==5){
+     jLabel1.setForeground(Color.MAGENTA);
+     tcolor="purple";
+ }
+        if((int)x==1){
+            jLabel1.setText("red");
+       
+        } else if ((int)x==2){
+            jLabel1.setText("green");
+       
+        } else if ((int)x==3){
+            jLabel1.setText("blue");
+       
+        } else if ((int)x==4){
+            jLabel1.setText("yellow");
+       
+        } else if ((int)x==5){
+            jLabel1.setText("purple");
+       
+        }    // TODO add your handling code here:
+    }//GEN-LAST:event_purpleButtonActionPerformed
+
+    private void redButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_redButtonActionPerformed
+if(tcolor.equals("red")){
+            currentScore+=100;   
+        }
+        round++;
+        if(round==5){
+            //the correct final score for nick 
+            finalScore = currentScore + game1.userScore;
+            
             System.out.println("Final Score = " +finalScore);
             currentScore=0;
             round=0;
@@ -551,7 +367,65 @@ if(tcolor.equals("purple")){
             jLabel1.setText("purple");
        
         }        // TODO add your handling code here:
-    }//GEN-LAST:event_purpleButtonActionPerformed
+    }//GEN-LAST:event_redButtonActionPerformed
+
+    private void yellowButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yellowButtonActionPerformed
+if(tcolor.equals("yellow")){
+            currentScore+=100;   
+        }
+        round++;
+        if(round==5){
+            //the correct final score for nick 
+            finalScore = currentScore + game1.userScore;
+            
+            System.out.println("Final Score = " +finalScore);
+            currentScore=0;
+            round=0;
+            dispose();
+            //tell nick to change his end screen to GameScreen game = New GameScreen();
+            //game.setVisible(true);
+            BubbleGameEndScreen x = new BubbleGameEndScreen();
+            x.setVisible(true);
+        }
+        System.out.println("current score = "+currentScore);
+        System.out.println("round " + round );
+        x = Math.random()*5+1;
+        System.out.println(x);
+        c= Math.random()*5+1;
+ System.out.println(c);
+ if((int)c==1){
+     jLabel1.setForeground(Color.RED);
+       tcolor="red";
+ } else if((int)c==2){
+     jLabel1.setForeground(Color.GREEN);
+    tcolor="green";
+ } else if((int)c==3){
+      jLabel1.setForeground(Color.BLUE);
+     tcolor="blue";
+ } else if((int)c==4){
+      jLabel1.setForeground(Color.YELLOW);
+    tcolor="yellow";
+ } else if((int)c==5){
+     jLabel1.setForeground(Color.MAGENTA);
+     tcolor="purple";
+ }
+        if((int)x==1){
+            jLabel1.setText("red");
+       
+        } else if ((int)x==2){
+            jLabel1.setText("green");
+       
+        } else if ((int)x==3){
+            jLabel1.setText("blue");
+       
+        } else if ((int)x==4){
+            jLabel1.setText("yellow");
+       
+        } else if ((int)x==5){
+            jLabel1.setText("purple");
+       
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_yellowButtonActionPerformed
 
     private void greenButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_greenButtonActionPerformed
 if(tcolor.equals("green")){
@@ -560,8 +434,8 @@ if(tcolor.equals("green")){
         round++;
         if(round==5){
             //the correct final score for nick 
-            //finalScore = currentScore + GameScreen2.userScore
-            finalScore=currentScore;
+            finalScore = currentScore + game1.userScore;
+            
             System.out.println("Final Score = " +finalScore);
             currentScore=0;
             round=0;
@@ -611,6 +485,104 @@ if(tcolor.equals("green")){
         }        // TODO add your handling code here:
     }//GEN-LAST:event_greenButtonActionPerformed
 
+    private void blueButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blueButtonActionPerformed
+if(tcolor.equals("blue")){
+            currentScore+=100;   
+        }
+        round++;
+        if(round==5){
+            //the correct final score for nick 
+            finalScore = currentScore + game1.userScore;
+            
+            System.out.println("Final Score = " +finalScore);
+            currentScore=0;
+            round=0;
+            dispose();
+            //tell nick to change his end screen to GameScreen game = New GameScreen();
+            //game.setVisible(true);
+            BubbleGameEndScreen x = new BubbleGameEndScreen();
+            x.setVisible(true);
+        }
+        System.out.println("current score = "+currentScore);
+        System.out.println("round " + round );
+        x = Math.random()*5+1;
+        System.out.println(x);
+        c= Math.random()*5+1;
+ System.out.println(c);
+ if((int)c==1){
+     jLabel1.setForeground(Color.RED);
+       tcolor="red";
+ } else if((int)c==2){
+     jLabel1.setForeground(Color.GREEN);
+    tcolor="green";
+ } else if((int)c==3){
+      jLabel1.setForeground(Color.BLUE);
+     tcolor="blue";
+ } else if((int)c==4){
+      jLabel1.setForeground(Color.YELLOW);
+    tcolor="yellow";
+ } else if((int)c==5){
+     jLabel1.setForeground(Color.MAGENTA);
+     tcolor="purple";
+ }
+        if((int)x==1){
+            jLabel1.setText("red");
+       
+        } else if ((int)x==2){
+            jLabel1.setText("green");
+       
+        } else if ((int)x==3){
+            jLabel1.setText("blue");
+       
+        } else if ((int)x==4){
+            jLabel1.setText("yellow");
+       
+        } else if ((int)x==5){
+            jLabel1.setText("purple");
+       
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_blueButtonActionPerformed
+
+    private void purpleButtonAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_purpleButtonAncestorAdded
+purpleButton.setBackground(Color.MAGENTA);        // TODO add your handling code here:
+    }//GEN-LAST:event_purpleButtonAncestorAdded
+
+    private void purpleButtonMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_purpleButtonMouseMoved
+getRootPane().setDefaultButton(purpleButton);         // TODO add your handling code here:
+    }//GEN-LAST:event_purpleButtonMouseMoved
+
+    private void redButtonAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_redButtonAncestorAdded
+redButton.setBackground(Color.RED);        // TODO add your handling code here:
+    }//GEN-LAST:event_redButtonAncestorAdded
+
+    private void blueButtonAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_blueButtonAncestorAdded
+blueButton.setBackground(Color.BLUE);        // TODO add your handling code here:
+    }//GEN-LAST:event_blueButtonAncestorAdded
+
+    private void greenButtonAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_greenButtonAncestorAdded
+greenButton.setBackground(Color.GREEN);        // TODO add your handling code here:
+    }//GEN-LAST:event_greenButtonAncestorAdded
+
+    private void yellowButtonAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_yellowButtonAncestorAdded
+yellowButton.setBackground(Color.YELLOW);        // TODO add your handling code here:
+    }//GEN-LAST:event_yellowButtonAncestorAdded
+
+    private void redButtonMouseWheelMoved(java.awt.event.MouseWheelEvent evt) {//GEN-FIRST:event_redButtonMouseWheelMoved
+getRootPane().setDefaultButton(redButton);              // TODO add your handling code here:
+    }//GEN-LAST:event_redButtonMouseWheelMoved
+
+    private void blueButtonMouseWheelMoved(java.awt.event.MouseWheelEvent evt) {//GEN-FIRST:event_blueButtonMouseWheelMoved
+getRootPane().setDefaultButton(blueButton);              // TODO add your handling code here:
+    }//GEN-LAST:event_blueButtonMouseWheelMoved
+
+    private void yellowButtonMouseWheelMoved(java.awt.event.MouseWheelEvent evt) {//GEN-FIRST:event_yellowButtonMouseWheelMoved
+getRootPane().setDefaultButton(yellowButton);              // TODO add your handling code here:
+    }//GEN-LAST:event_yellowButtonMouseWheelMoved
+
+    private void greenButtonMouseWheelMoved(java.awt.event.MouseWheelEvent evt) {//GEN-FIRST:event_greenButtonMouseWheelMoved
+getRootPane().setDefaultButton(greenButton);              // TODO add your handling code here:
+    }//GEN-LAST:event_greenButtonMouseWheelMoved
+
     /**
      * @param args the command line arguments
      */
@@ -655,10 +627,3 @@ if(tcolor.equals("green")){
     private javax.swing.JButton yellowButton;
     // End of variables declaration//GEN-END:variables
 }
-
-
-
-//i think the score needs to be fixed 
-//go back and randomized the color of text 
-
-

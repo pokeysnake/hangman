@@ -8,6 +8,10 @@
  * @author tater
  */
 package com.mycompany.swingprojectv1point1;
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class BubbleGameEndScreen extends javax.swing.JFrame {
 
     /**
@@ -28,6 +32,10 @@ public class BubbleGameEndScreen extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        initials = new javax.swing.JTextField();
+        question = new javax.swing.JLabel();
+        NO = new javax.swing.JButton();
+        YES = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -50,28 +58,112 @@ public class BubbleGameEndScreen extends javax.swing.JFrame {
             }
         });
 
+        initials.setText("Input Initials in capital letters");
+        initials.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                initialsAncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+                initialsAncestorRemoved(evt);
+            }
+        });
+        initials.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                initialsActionPerformed(evt);
+            }
+        });
+
+        question.setText("Congrats, you just go a new higschore, would you like to save it?");
+        question.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                questionAncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        question.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                questionPropertyChange(evt);
+            }
+        });
+
+        NO.setText("NO");
+        NO.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                NOAncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        NO.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NOActionPerformed(evt);
+            }
+        });
+
+        YES.setText("YES");
+        YES.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                YESAncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        YES.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                YESActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(130, 130, 130))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(163, 163, 163)
+                        .addGap(147, 147, 147)
                         .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(147, 147, 147)
-                        .addComponent(jButton1)))
-                .addContainerGap(119, Short.MAX_VALUE))
+                        .addGap(73, 73, 73)
+                        .addComponent(YES)
+                        .addGap(43, 43, 43)
+                        .addComponent(NO))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(question, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(initials))))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(95, 95, 95)
+                .addGap(45, 45, 45)
                 .addComponent(jLabel1)
-                .addGap(58, 58, 58)
+                .addGap(18, 18, 18)
                 .addComponent(jButton1)
-                .addContainerGap(108, Short.MAX_VALUE))
+                .addGap(54, 54, 54)
+                .addComponent(question)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(NO)
+                    .addComponent(YES))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addComponent(initials, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(45, 45, 45))
         );
 
         pack();
@@ -82,7 +174,8 @@ public class BubbleGameEndScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel1ComponentHidden
 
     private void jLabel1PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jLabel1PropertyChange
-jLabel1.setText("Your Final Score is "+GameScreen.finalScore);          // TODO add your handling code here:
+jLabel1.setText("Your Final Score is "+GameScreen.finalScore);  
+// TODO add your handling code here:
     }//GEN-LAST:event_jLabel1PropertyChange
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -90,6 +183,122 @@ jLabel1.setText("Your Final Score is "+GameScreen.finalScore);          // TODO 
     functionsScreen x = new functionsScreen();
     x.setVisible(true);// TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void initialsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_initialsActionPerformed
+         
+
+// TODO add your handling code here:
+    }//GEN-LAST:event_initialsActionPerformed
+
+    private void initialsAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_initialsAncestorAdded
+      // TODO add your handling code here:
+    }//GEN-LAST:event_initialsAncestorAdded
+
+    private void questionAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_questionAncestorAdded
+question.setVisible(false);    
+if(GameScreen.finalScore>SwingProjectv1point1.highScore5){
+    question.setVisible(true);
+}
+// TODO add your handling code here:
+    }//GEN-LAST:event_questionAncestorAdded
+
+    private void NOAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_NOAncestorAdded
+NO.setVisible(false);
+if(GameScreen.finalScore>SwingProjectv1point1.highScore5){
+    NO.setVisible(true);
+}
+
+// TODO add your handling code here:
+    }//GEN-LAST:event_NOAncestorAdded
+
+    private void questionPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_questionPropertyChange
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_questionPropertyChange
+
+    private void YESAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_YESAncestorAdded
+YES.setVisible(false);
+if(GameScreen.finalScore>SwingProjectv1point1.highScore5){
+    YES.setVisible(true);
+}
+// TODO add your handling code here:
+    }//GEN-LAST:event_YESAncestorAdded
+
+    private void YESActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_YESActionPerformed
+       if(GameScreen.finalScore>=SwingProjectv1point1.highScore1){ //1
+           if(SwingProjectv1point1.highScore1>0){
+               //moves 1 down
+               SwingProjectv1point1.highScore2 = SwingProjectv1point1.highScore1;
+               SwingProjectv1point1.highScore2init = SwingProjectv1point1.highScore1init;
+               System.out.println(SwingProjectv1point1.highScore2init+SwingProjectv1point1.highScore2);
+               //moves 2down
+               SwingProjectv1point1.highScore3 = SwingProjectv1point1.highScore2;
+               SwingProjectv1point1.highScore3init = SwingProjectv1point1.highScore2init;
+               //moves 3down
+               SwingProjectv1point1.highScore4 = SwingProjectv1point1.highScore3;
+               SwingProjectv1point1.highScore4init = SwingProjectv1point1.highScore3init;
+               //moves 4down
+               SwingProjectv1point1.highScore5 = SwingProjectv1point1.highScore5;
+               SwingProjectv1point1.highScore5init = SwingProjectv1point1.highScore5init;
+           }
+           SwingProjectv1point1.highScore1 = GameScreen.finalScore;
+           SwingProjectv1point1.highScore1init = initials.getText();
+           System.out.println(SwingProjectv1point1.highScore1init);
+       } else if(GameScreen.finalScore>=SwingProjectv1point1.highScore2&&GameScreen.finalScore<SwingProjectv1point1.highScore1){ //2
+           if(SwingProjectv1point1.highScore2>0){
+               //moves 2down
+               SwingProjectv1point1.highScore3 = SwingProjectv1point1.highScore2;
+               SwingProjectv1point1.highScore3init = SwingProjectv1point1.highScore2init;
+               //moves 3down
+               SwingProjectv1point1.highScore4 = SwingProjectv1point1.highScore3;
+               SwingProjectv1point1.highScore4init = SwingProjectv1point1.highScore3init;
+               //moves 4down
+               SwingProjectv1point1.highScore5 = SwingProjectv1point1.highScore5;
+               SwingProjectv1point1.highScore5init = SwingProjectv1point1.highScore5init;
+           }
+           SwingProjectv1point1.highScore2 = GameScreen.finalScore;
+           SwingProjectv1point1.highScore2init = initials.getText();
+           System.out.println(SwingProjectv1point1.highScore2init);
+       } else if(GameScreen.finalScore>=SwingProjectv1point1.highScore3&&GameScreen.finalScore<SwingProjectv1point1.highScore2){//3
+           if(SwingProjectv1point1.highScore3>0){
+               //moves 3down
+               SwingProjectv1point1.highScore4 = SwingProjectv1point1.highScore3;
+               SwingProjectv1point1.highScore4init = SwingProjectv1point1.highScore3init;
+               //moves 4down
+               SwingProjectv1point1.highScore5 = SwingProjectv1point1.highScore5;
+               SwingProjectv1point1.highScore5init = SwingProjectv1point1.highScore5init;
+           }
+           SwingProjectv1point1.highScore3 = GameScreen.finalScore;
+           SwingProjectv1point1.highScore3init = initials.getText();
+           System.out.println(SwingProjectv1point1.highScore3init);
+       } else if(GameScreen.finalScore>=SwingProjectv1point1.highScore4&&GameScreen.finalScore<SwingProjectv1point1.highScore3){//4
+           if(SwingProjectv1point1.highScore3>0){
+               //moves 4down
+               SwingProjectv1point1.highScore5 = SwingProjectv1point1.highScore5;
+               SwingProjectv1point1.highScore5init = SwingProjectv1point1.highScore5init;
+           }
+           SwingProjectv1point1.highScore4 = GameScreen.finalScore;
+           SwingProjectv1point1.highScore4init = initials.getText();
+           System.out.println(SwingProjectv1point1.highScore4init);
+       } else if(GameScreen.finalScore>=SwingProjectv1point1.highScore5&&GameScreen.finalScore<SwingProjectv1point1.highScore4){//5
+           SwingProjectv1point1.highScore5 = GameScreen.finalScore;
+           SwingProjectv1point1.highScore5init = initials.getText();
+           System.out.println(SwingProjectv1point1.highScore5init);
+       }
+        try {
+            SwingProjectv1point1.fileMethod(1);
+        } catch (Exception ex) {
+            Logger.getLogger(BubbleGameEndScreen.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_YESActionPerformed
+
+    private void initialsAncestorRemoved(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_initialsAncestorRemoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_initialsAncestorRemoved
+
+    private void NOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NOActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NOActionPerformed
 
     /**
      * @param args the command line arguments
@@ -127,7 +336,11 @@ jLabel1.setText("Your Final Score is "+GameScreen.finalScore);          // TODO 
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton NO;
+    private javax.swing.JButton YES;
+    private javax.swing.JTextField initials;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel question;
     // End of variables declaration//GEN-END:variables
 }

@@ -100,9 +100,6 @@
         </Component>
         <Component class="javax.swing.JLabel" name="dancingman">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\nic\Documents\NetBeansProjects\hangman\5a65dcc4e4a067fc85e1c85a3d8809d0.gif"/>
-            </Property>
             <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
               <ComponentRef name="dancingman"/>
             </Property>
@@ -114,11 +111,6 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JLabel" name="lasagna">
-          <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\nic\Documents\NetBeansProjects\hangman\58f5578a4be18ec292b7a4374bebbe3f-lasagna-dish-illustration.png"/>
-            </Property>
-          </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="0" y="0" width="260" height="230"/>

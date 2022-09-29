@@ -97,9 +97,10 @@ public class start extends javax.swing.JFrame {
     }//GEN-LAST:event_playbtnActionPerformed
 
     private void highscoresbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_highscoresbtnActionPerformed
-        highscores high = new highscores();
-        high.setVisible(true);
-        dispose();
+  
+    highscoresScreen x = new highscoresScreen();
+    x.setVisible(true);
+    dispose();
     }//GEN-LAST:event_highscoresbtnActionPerformed
 
     private void creditsbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_creditsbtnActionPerformed

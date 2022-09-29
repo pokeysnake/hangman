@@ -4549,9 +4549,10 @@ if(t.equals(target.substring(i,i+1))){
      if(restart>1){
     userScore=userScore-10;
 }
-    dispose();
-    gameover end = new gameover();
-        end.setVisible(true);
+      dispose();
+    GameScreen x = new GameScreen();
+        x.setVisible(true);
+        
     } else if (ccount==8){
         userScore=score;
         x=0;
@@ -4569,8 +4570,8 @@ if(t.equals(target.substring(i,i+1))){
     userScore=userScore-10;
 }
     dispose();
-    gameover end = new gameover();
-        end.setVisible(true);
+    GameScreen x = new GameScreen();
+        x.setVisible(true);
     }
     wrong++;  
     win++;
@@ -4599,8 +4600,8 @@ System.out.println(score);
     userScore=userScore-10;
 }
         dispose();
-        gameover end = new gameover();
-        end.setVisible(true);
+    GameScreen x = new GameScreen();
+        x.setVisible(true);
     }
     //code the score reduction 
     
@@ -4961,8 +4962,8 @@ letterS.setVisible(false);
     }//GEN-LAST:event_letterSActionPerformed
 
     private void SkipbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SkipbuttonActionPerformed
-        gameover gameover = new gameover();
-        gameover.setVisible(true);
+        GameScreen x = new GameScreen();
+        x.setVisible(true);
         dispose();
     }//GEN-LAST:event_SkipbuttonActionPerformed
 
